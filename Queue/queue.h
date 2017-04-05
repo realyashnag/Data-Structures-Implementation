@@ -1,5 +1,5 @@
 #include "header.h"
-#define NONE -1
+#define NONE 0
 
 int queue_isfull(queue *q)
 {
