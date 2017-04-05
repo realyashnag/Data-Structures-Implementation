@@ -1,3 +1,4 @@
+#include "stack.h"
 void create_stack(stack *s, int size)
 {
     s->arr = (int*)malloc(sizeof(int)*size);
