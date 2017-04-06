@@ -1,3 +1,4 @@
+#include "binary_search_tree.h"
 node* get_node()
 {
     node *temp;
