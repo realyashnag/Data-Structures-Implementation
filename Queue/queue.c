@@ -1,7 +1,7 @@
 #include "header.h"
-#define NONE 0
+#define NONE 0                  //Default for unfilled queue spots
 
-int queue_isfull(queue *q)
+int queue_isfull(queue *q)                  //Condition for full queue
 {
     if ((q->peeche ==  q->size-1 && q->aage == 0) || (q->aage == q->peeche+1))
     {
@@ -10,7 +10,7 @@ int queue_isfull(queue *q)
     return 0;
 }
 
-int queue_isempty(queue *q)
+int queue_isempty(queue *q)                 //Condition for empty queue
 {
     if (q->peeche == q->aage)
     {
@@ -22,7 +22,7 @@ int queue_isempty(queue *q)
     return 0;
 }
 
-void create_queue(queue *q, int size)
+void create_queue(queue *q, int size)       //Initialize and Allocate memory for a new queue
 {
     q->arr = (int*)malloc(sizeof(int)*size);
     q->size = size;
@@ -30,7 +30,7 @@ void create_queue(queue *q, int size)
     q->peeche = -1;
 }
 
-void enque(queue *q, int var)
+void enque(queue *q, int var)               //Insert a value in queue
 {
     if (queue_isfull(q))
     {
@@ -52,7 +52,7 @@ void enque(queue *q, int var)
     }
 }
 
-int deque(queue *q)
+int deque(queue *q)                         //Delete and return value from queue
 {
     if (queue_isempty(q))
     {
@@ -77,7 +77,7 @@ int deque(queue *q)
     }
 }
 
-void print_queue(queue q)
+void print_queue(queue q)                       //Print queue in order
 {
     if (queue_isempty(&q))
     {
