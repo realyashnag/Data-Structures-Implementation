@@ -87,18 +87,6 @@ void postorder_traversal(node* root)        //Post-Order : Left -> Right -> Root
     }
 }
 
-/* Breadth First Traversal */
-
-void bfs_growing_traversal(node* root)    //Growing : Top -> Bottom
-{
-    
-}
-
-void bfs_decaying_traversal(node* rooot)    //Decaying : Bottom -> Top  
-{
-
-}
-
 
 node* search(binary_search_tree *t, int value)
 {
